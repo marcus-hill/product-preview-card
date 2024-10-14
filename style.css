@@ -1,0 +1,239 @@
+// https://piccalil.li/blog/a-modern-css-reset
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Code: */
+
+body {
+    background-color:  hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.product-preview-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 1.75rem 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    max-height: 28.5rem;
+}
+
+.product-category {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.75rem;
+    color: #6C7289;
+    margin: 1.5rem 14.18rem 0.75rem 1.5rem;
+}
+
+.product-name {
+    font-family: 'Fraunces', sans-serif;
+    line-height: 2rem;
+    font-size: 2rem;
+    color: #1C232B;
+    margin: 0 1.5rem;
+}
+
+.product-description {
+    margin: 1rem 1.5rem 1.5rem 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.43rem;
+    font-size: 0.875rem;
+    color: #6C7289;
+}
+
+.prices {
+    margin: 0 7.781rem 1.25rem 1.53rem;
+}
+
+.current-price {
+    display: inline-block;
+    color: #3D8168;
+    font-family: 'Fraunces', sans-serif;
+    line-height: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 1.187rem;
+}
+
+.original-price {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8125rem;
+    line-height: 1.43rem;
+    vertical-align: top;
+    color: #6C7289;
+    margin: 0;
+}
+
+.cart {
+    display: block;
+    border: none;
+    min-width: 90%;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 0.5rem;
+    background-color: #3D8168;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.9375rem 5.8125rem;
+    white-space: nowrap;
+}
+
+.cart-text {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    color: white;
+    font-weight: 600;
+}
+
+.icon {
+    margin-right: 0.725rem;
+    max-height: 1rem;
+}
+
+@media (min-width: 39.4rem) {
+    body {
+        align-items: center;
+    }
+
+    .product-name, .product-category, .product-description, .prices {
+        margin: 0 2.3rem;
+    }
+
+    .cart {
+        max-width: 85%;
+    }
+
+    .product-preview-card {
+        /* max-width: 40.5rem; */
+        flex-direction: row;
+        max-width: 37.5rem;
+        min-height: 28.1rem;
+        margin: 0;
+    }
+
+    .product-image-holder {
+        max-width: 18rem;
+        min-height: 100%;
+    }
+    
+    .product-image {
+        min-height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .product-category {
+        margin-top: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .product-name {
+        margin-bottom: 1.5rem;
+    }
+
+    .product-description {
+        margin-bottom: 1.81rem;
+    }
+
+    .prices {
+        margin-bottom: 1.875rem;
+    }
+
+    .cart:hover {
+        background-color: #1A4032;
+        cursor: pointer;
+    }
+
+}

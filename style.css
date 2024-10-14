@@ -136,6 +136,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     margin-right: 1.187rem;
+    vertical-align: middle;
 }
 
 .original-price {
@@ -143,9 +144,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8125rem;
     line-height: 1.43rem;
-    vertical-align: top;
     color: #6C7289;
-    margin: 0;
 }
 
 .cart {
@@ -192,7 +191,6 @@ body {
     }
 
     .product-preview-card {
-        /* max-width: 40.5rem; */
         flex-direction: row;
         max-width: 37.5rem;
         min-height: 28.1rem;
@@ -200,14 +198,14 @@ body {
     }
 
     .product-image-holder {
-        max-width: 18rem;
+        min-width: 18rem;
         min-height: 100%;
     }
     
     .product-image {
         min-height: 100%;
         width: 100%;
-        object-fit: cover;
+        content:url("images/image-product-desktop.jpg")
     }
 
     .main-content {

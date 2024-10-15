@@ -145,6 +145,7 @@ body {
     font-size: 0.8125rem;
     line-height: 1.43rem;
     color: #6C7289;
+    text-decoration: line-through;
 }
 
 .cart {
